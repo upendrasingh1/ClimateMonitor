@@ -24,12 +24,12 @@ import akka.actor._
 import org.joda.time.{DateTime, DateTimeZone}
 import com.datastax.spark.connector.embedded.Event
 
-/** Automates demo activity every 2 seconds for demos by sending requests to `KillrWeatherApp` instances. */
+/** Automates demo activity every 2 seconds for demos by sending requests to `ClimateMonitorApp` instances. */
 object ClimateMonitorClientApp extends App with ClientHelper{
 
   /** Creates the ActorSystem. */
-  //val system = ActorSystem("KillrWeather", ConfigFactory.parseString("akka.remote.netty.tcp.port = 2552"))
-  val system = ActorSystem("ClimateMonitor", ConfigFactory.parseString("akka.remote.netty.tcp.port = 2552"))
+  //val system = ActorSystem("ClimateMonitor", ConfigFactory.parseString("akka.remote.netty.tcp.port = 2552"))
+  val system = ActorSystem("ClimateMonitor1", ConfigFactory.parseString("akka.remote.netty.tcp.port = 2552"))
 
   /* The root supervisor and fault tolerance handler of the data ingestion nodes. */
   val guardian = system.actorOf(Props[ApiNodeGuardian], "node-guardian")
@@ -40,7 +40,7 @@ object ClimateMonitorClientApp extends App with ClientHelper{
 
 }
 
-/** Automates demo activity every 2 seconds for demos by sending requests to `KillrWeatherApp` instances. */
+/** Automates demo activity every 2 seconds for demos by sending requests to `ClimateMonitorApp` instances. */
 final class ApiNodeGuardian extends ClusterAwareNodeGuardian with ClientHelper {
   import context.dispatcher
 

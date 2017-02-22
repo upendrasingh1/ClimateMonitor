@@ -30,7 +30,7 @@ import com.datastax.spark.connector.embedded._
  *
  * This `NodeGuardian` creates the [[KafkaStreamingActor]] which creates a streaming
  * pipeline from Kafka to Cassandra, via Spark, which streams the raw data from Kafka,
- * transforms data to [[com.datastax.killrweather.Weather.RawWeatherData]] (hourly per
+ * transforms data to [[com.acme.ClimateMonitor.Weather.RawWeatherData]] (hourly per
  * weather station), and saves the new data to the cassandra raw data table on arrival.
  */
 class NodeGuardian(ssc: StreamingContext, kafka: EmbeddedKafka, settings: WeatherSettings)

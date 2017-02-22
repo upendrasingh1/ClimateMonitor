@@ -24,7 +24,7 @@ import com.datastax.spark.connector.streaming._
 
 /** The KafkaStreamActor creates a streaming pipeline from Kafka to Cassandra via Spark.
   * It creates the Kafka stream which streams the raw data, transforms it, to
-  * a column entry for a specific weather station[[com.datastax.killrweather.Weather.RawWeatherData]],
+  * a column entry for a specific weather station[[com.acme.ClimateMonitor.Weather.RawWeatherData]],
   * and saves the new data to the cassandra table as it arrives.
   */
 class KafkaStreamingActor(kafkaParams: Map[String, String],

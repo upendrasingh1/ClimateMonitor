@@ -29,7 +29,7 @@ import org.apache.spark.rdd.RDD
 private[killrweather] class Initializer(sc: SparkContext, settings: WeatherSettings)
   extends Serializable with TestFileHelper with Logging {
 
-  import com.datastax.killrweather.Weather._
+  import com.acme.ClimateMonitor.Weather._
   import settings._
 
   /** Loads data from /data/load files (because this is for a runnable demo.

@@ -40,7 +40,7 @@ object KillrWeatherApp extends App {
   val settings = new WeatherSettings
   import settings._
 
-  /** Creates the ActorSystem. */
+  /** Creates the ActorSystem. *//
   val system = ActorSystem(AppName)
 
   val killrWeather = KillrWeather(system)

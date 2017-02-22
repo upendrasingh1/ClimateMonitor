@@ -26,7 +26,7 @@ object Settings extends Build {
   lazy val buildSettings = Seq(
     name := "ClimateMonitor",
     normalizedName := "ClimateMonitor",
-    organization := "com.datastax.killrweather",
+    organization := "com.acme.ClimateMonitor",
     organizationHomepage := Some(url("http://www.github.com/killrweather/killrweather")),
     scalaVersion := Versions.Scala,
     homepage := Some(url("https://github.com/killrweather/killrweather")),
